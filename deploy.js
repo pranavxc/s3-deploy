@@ -11,7 +11,7 @@ let deploy = function (folder, bucket, distId, invalidation) {
                         --etag \
                         --gzip xml,html,htm,js,css,ttf,otf,svg,txt \
                         --invalidate "${invalidation}" \
-                        --noCache `;
+                        --cacheControl "max-age=31536000"`;
 
       const cwd = path.resolve(folder);
       exec.exec(command, [], { cwd }).then(resolve).catch(reject);

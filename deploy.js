@@ -9,7 +9,7 @@ let deploy = function (folder, bucket, distId, invalidation) {
                         --cwd . \
                         --distId ${distId} \
                         --etag \
-                        --gzip xml,html,htm,js,css,ttf,otf,svg,txt \
+                        --gzip xml,html,htm,js,css,ttf,otf,svg,txt,woff2 \
                         --invalidate "${invalidation}" \
                         --cacheControl "max-age=31536000"`;
 
